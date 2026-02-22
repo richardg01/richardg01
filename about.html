@@ -10,10 +10,11 @@
         nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; border-bottom: 1px solid #eee; }
         nav a { text-decoration: none; color: var(--text); margin-left: 20px; }
         .container { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
-        h2 { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 2px; color: var(--accent); }
-        .bio-text { font-size: 1.2rem; margin-bottom: 3rem; }
-        .img-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+        h2 { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 2px; color: var(--accent); margin-top: 3rem; }
+        .bio-text { font-size: 1.2rem; font-weight: 300; }
+        .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
         img { width: 100%; border-radius: 2px; }
+        .full-img { width: 100%; margin: 2rem 0; }
     </style>
 </head>
 <body>
@@ -22,14 +23,14 @@
         <div class="links"><a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="blog.html">BLOG</a></div>
     </nav>
     <div class="container">
-        <h2>01 // BACKGROUND</h2>
+        <h2>01 // ORIGINS</h2>
         <div class="bio-text">
             <p>I'm originally from North Carolina, specifically Chapel Hill. It's where I lived for the first 18 years of my life before I decided to go to NYU for university, where I studied economics and political science.</p>
         </div>
         
-        <div class="img-row">
-            <img src="IMG_3995.JPG" alt="NYU">
-            <img src="IMG_9531_Original.jpg" alt="Lifestyle">
+        <div class="img-grid">
+            <img src="IMG_3995.JPG" alt="NYU Speech">
+            <img src="IMG_9531_Original.JPG" alt="NYC Graffiti">
         </div>
 
         <h2>02 // CURRENT</h2>
@@ -37,7 +38,13 @@
             <p>I'm 24 years old, and currently work in finance at an investment bank in New York City. Outside of work, I enjoy swimming, playing tennis, and performing violin in Central Park.</p>
         </div>
         
-        <img src="IMG_4053.jpg" alt="Central Park Violin" style="width: 100%;">
+        <img src="64291086-50df-4645-9325-a48523dfe775.jpg" class="full-img" alt="Central Park Violin">
+
+        <h2>03 // LIFE</h2>
+        <div class="bio-text">
+            <p>Whether I'm navigating DCM or the city streets, I value moments of creativity and community storytelling.</p>
+        </div>
+        <img src="IMG_4053.jpg" class="full-img" alt="Cotton Candy Film Shot">
     </div>
 </body>
 </html>

@@ -29,4 +29,117 @@
         .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; padding: 8rem 0; border-top: 1px solid #eee; }
         .about-main-text { font-size: 1.4rem; font-weight: 300; margin-bottom: 4rem; }
         .about-image-stack img { width: 100%; margin-bottom: 2rem; border-radius: 2px; }
-        .caption { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-
+        .caption { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-top: -1.5rem; margin-bottom: 2rem; text-align: right; }
+
+        /* Projects - Alternating Layout */
+        .project-block { padding: 6rem 0; border-top: 1px solid #eee; }
+        .project-item { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 8rem; }
+        .project-item.reverse { direction: rtl; }
+        .project-item.reverse .project-info { direction: ltr; }
+        .project-info h3 { font-size: 2.5rem; margin: 0 0 1rem 0; letter-spacing: -1px; }
+        .project-info p { font-size: 1.1rem; color: var(--accent); }
+        .project-image img { width: 100%; filter: grayscale(10%); transition: 0.5s; }
+        .project-image img:hover { filter: grayscale(0%); }
+
+        /* Footer / Contact */
+        footer { padding: 10rem 0 4rem 0; background: #000; color: #fff; text-align: center; }
+        footer h2 { font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 3rem; letter-spacing: -2px; }
+        .contact-links { font-family: var(--mono); margin-top: 2rem; }
+        .contact-links a { color: #fff; text-decoration: none; margin: 0 20px; font-size: 1rem; position: relative; }
+        .contact-links a:hover::after { content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 1px; background: #fff; }
+
+        @media (max-width: 768px) {
+            .hero, .about-grid, .project-item { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-text h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">RICHARD GAO // 2026</div>
+    <div class="links">
+        <a href="#about">ABOUT</a>
+        <a href="#work">WORK</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</nav>
+
+<div class="container">
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Aspiring<br>Litigator.</h1>
+            <p>// Duke Law '29 <br>// NYC Based <br>// Editor of The Triangle Toast</p>
+        </div>
+        <div class="hero-image">
+            <img src="IMG_2900.JPG" alt="Richard Gao Headshot">
+        </div>
+    </header>
+
+    <section id="about" class="about-grid">
+        <div>
+            <span class="section-label">01. Perspective</span>
+            <div class="about-main-text">
+                <p>Based in New York, I am currently navigating the space between high-stakes litigation and community-driven media.</p>
+                <p>As a future litigator at <strong>Duke University School of Law</strong>, my focus lies in the intersection of legal advocacy and emerging tech. I believe the future of law belongs to those who can bridge technical precision with human storytelling.</p>
+            </div>
+            <img src="IMG_3995.JPG" alt="Secretary-General Remarks">
+            <p class="caption">Secretary-General Remarks // NYU</p>
+        </div>
+        <div class="about-image-stack">
+            <span class="section-label">02. Life</span>
+            <img src="IMG_9531_Original.jpg" alt="NYC Lifestyle">
+            <p style="font-size: 0.9rem; margin-bottom: 3rem;">Outside the classroom, I am an avid explorer of the French language and the creator of <em>The Triangle Toast</em>, a newsletter tracking the pulse of North Carolina's RTP area.</p>
+            <img src="IMG_4053.jpg" alt="Travel and Personal">
+        </div>
+    </section>
+
+    <section id="work" class="project-block">
+        <span class="section-label">03. Selected Projects</span>
+        
+        <div class="project-item">
+            <div class="project-image">
+                <img src="IMG_9561_Original.JPG" alt="The Triangle Toast">
+            </div>
+            <div class="project-info">
+                <h3>The Triangle Toast</h3>
+                <p>A weekly curation of news, real estate, and cultural trends in Raleigh, Durham, and Chapel Hill. Built for the community, by the community.</p>
+            </div>
+        </div>
+
+        <div class="project-item reverse">
+            <div class="project-image">
+                <img src="e9b1847e-8db0-4626-80bb-fee5ccdd7f05.jpg" alt="The Brooklyn Busker">
+            </div>
+            <div class="project-info">
+                <h3>The Brooklyn Busker</h3>
+                <p>Street performance as a form of urban storytelling. Bringing live violin music to the public spaces of New York City.</p>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-image">
+                <img src="IMG_3694.jpg" alt="Performance Moments">
+            </div>
+            <div class="project-info">
+                <h3>Performance & Community</h3>
+                <p>Whether performing with partners (<em>IMG_3999.JPG</em>) or solo, I value the connection that music creates in high-pressure environments.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer id="contact">
+    <div class="container">
+        <h2>Let's connect.</h2>
+        <div class="contact-links">
+            <a href="mailto:Richard.gao0308@gmail.com">EMAIL</a>
+            <a href="https://www.linkedin.com/in/richard-gao-279ab9191/" target="_blank">LINKEDIN</a>
+            <a href="https://www.instagram.com/brooklyn_busker/" target="_blank">INSTAGRAM</a>
+        </div>
+        <p style="margin-top: 6rem; font-family: var(--mono); font-size: 0.6rem; opacity: 0.4;">© 2026 RICHARD GAO // BUILT IN NYC // DUKE LAW '29</p>
+    </div>
+</footer>
+
+</body>
+</html>

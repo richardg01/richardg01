@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Gao // Portfolio</title>
+    <title>Richard Gao // Home</title>
     <style>
         :root { --bg: #ffffff; --text: #111111; --accent: #666; --mono: 'Courier New', Courier, monospace; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.5; }
         nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 100; border-bottom: 1px solid #eee; }
         nav a { text-decoration: none; color: var(--text); margin-left: 20px; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
-        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; padding: 2rem 0; min-height: 60vh; }
+        
+        /* Hero Styling */
+        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; padding: 3rem 0; min-height: 55vh; }
         .hero-text h1 { font-size: clamp(2.2rem, 5vw, 4rem); margin: 0; letter-spacing: -2px; line-height: 0.95; text-transform: uppercase; }
         .hero-text p { font-family: var(--mono); color: var(--accent); margin-top: 1rem; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        .hero-image img { width: 100%; max-height: 50vh; object-fit: cover; border-radius: 2px; }
+        .hero-image img { width: 100%; height: 450px; object-fit: cover; border-radius: 2px; }
+
+        .welcome-text { font-size: 1.2rem; padding: 2rem 0; color: var(--accent); max-width: 800px; }
+
+        /* Project Grid - Equal Sizes */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem 0; border-top: 1px solid #eee; }
-        .project-card img { width: 100%; height: 350px; object-fit: cover; filter: grayscale(100%); transition: 0.4s; }
+        .project-card { display: flex; flex-direction: column; }
+        .img-wrapper { width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 2px; }
+        .project-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.4s; }
         .project-card img:hover { filter: grayscale(0%); }
+        .project-label { font-family: var(--mono); font-size: 0.7rem; margin-top: 1rem; text-transform: uppercase; color: var(--accent); }
+
         footer { padding: 4rem 0; text-align: center; border-top: 1px solid #eee; font-family: var(--mono); font-size: 0.7rem; }
+        
+        @media (max-width: 768px) { .hero { grid-template-columns: 1fr; } .hero-image img { height: 350px; } }
     </style>
 </head>
 <body>
@@ -30,22 +42,27 @@
             <div class="hero-text">
                 <h1>New York City Based,<br>North Carolina Raised.</h1>
                 <p>// Duke Law '29 <br>// Debt Capital Markets <br>// The Triangle Toast</p>
+                <div class="welcome-text">
+                    Welcome to my personal website! You can learn more about me here, and find ways to contact me as well. I'm an aspiring lawyer with extensive experience working in Debt Capital Markets.
+                </div>
             </div>
-            <div class="hero-image"><img src="IMG_2898.JPG" alt="Richard Gao"></div>
+            <div class="hero-image">
+                <img src="IMG_2898.JPG" alt="Richard Gao Headshot">
+            </div>
         </header>
 
         <section class="project-grid">
             <div class="project-card">
-                <img src="IMG_9561_Original.JPG" alt="Triangle Toast">
-                <p style="font-family: var(--mono); font-size: 0.7rem; margin-top: 1rem;">PROJECT 01 // THE TRIANGLE TOAST</p>
+                <div class="img-wrapper"><img src="Gemini_Generated_Image_y46jp3y46jp3y46j.jpg" alt="Triangle Toast"></div>
+                <p class="project-label">01 // The Triangle Toast</p>
             </div>
             <div class="project-card">
-                <img src="e9b1847e-8db0-4626-80bb-fee5ccdd7f05.jpg" alt="Brooklyn Busker">
-                <p style="font-family: var(--mono); font-size: 0.7rem; margin-top: 1rem;">PROJECT 02 // THE BROOKLYN BUSKER</p>
+                <div class="img-wrapper"><img src="IMG_3999.JPG" alt="Violinists"></div>
+                <p class="project-label">02 // Portrait of Two Violinists</p>
             </div>
             <div class="project-card">
-                <img src="IMG_3694.jpg" alt="Performance">
-                <p style="font-family: var(--mono); font-size: 0.7rem; margin-top: 1rem;">PROJECT 03 // PERFORMANCE MOMENTS</p>
+                <div class="img-wrapper"><img src="IMG_3694.jpg" alt="Gorilla"></div>
+                <p class="project-label">03 // Central Park Gorilla</p>
             </div>
         </section>
     </div>

@@ -7,57 +7,53 @@
     <style>
         :root { --bg: #ffffff; --text: #111111; --accent: #555555; --mono: 'Courier New', Courier, monospace; }
         * { box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; line-height: 1.5; overflow-x: hidden; }
         
         /* Navigation */
-        nav { padding: 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; position: sticky; top: 0; background: rgba(255,255,255,0.9); z-index: 100; border-bottom: 1px solid #eee; }
+        nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 100; border-bottom: 1px solid #eee; }
         nav a { text-decoration: none; color: var(--text); margin-left: 20px; transition: 0.3s; }
         nav a:hover { color: var(--accent); }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        img { max-width: 100%; height: auto; display: block; border-radius: 2px; }
 
-        /* Hero - Robin Gao Inspired */
-        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; padding: 6rem 0; }
-        .hero-text h1 { font-size: clamp(3rem, 8vw, 6rem); margin: 0; letter-spacing: -3px; line-height: 0.85; text-transform: uppercase; }
-        .hero-text p { font-family: var(--mono); color: var(--accent); margin-top: 1.5rem; text-transform: uppercase; font-size: 0.9rem; }
-        .hero-image img { width: 100%; height: auto; border-radius: 2px; }
-
-        /* Section Styling */
-        .section-label { font-family: var(--mono); text-transform: uppercase; font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 3rem; display: block; }
+        /* Hero - Scaled for laptop visibility */
+        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; padding: 4rem 0; min-height: 70vh; }
+        .hero-text h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; letter-spacing: -2px; line-height: 0.95; text-transform: uppercase; }
+        .hero-text p { font-family: var(--mono); color: var(--accent); margin-top: 1rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
         
-        /* About Section - Editorial Grid */
-        .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; padding: 8rem 0; border-top: 1px solid #eee; }
-        .about-main-text { font-size: 1.4rem; font-weight: 300; margin-bottom: 4rem; }
-        .about-image-stack img { width: 100%; margin-bottom: 2rem; border-radius: 2px; }
-        .caption { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-top: -1.5rem; margin-bottom: 2rem; text-align: right; }
+        /* About Section */
+        .section-label { font-family: var(--mono); text-transform: uppercase; font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 2rem; display: block; }
+        .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; padding: 4rem 0; border-top: 1px solid #eee; }
+        .about-main-text { font-size: 1.2rem; font-weight: 400; margin-bottom: 2rem; }
+        .about-image-stack img { margin-bottom: 1.5rem; }
+        .caption { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-top: 0.5rem; margin-bottom: 2rem; text-align: right; }
 
-        /* Projects - Alternating Layout */
-        .project-block { padding: 6rem 0; border-top: 1px solid #eee; }
-        .project-item { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 8rem; }
-        .project-item.reverse { direction: rtl; }
-        .project-item.reverse .project-info { direction: ltr; }
-        .project-info h3 { font-size: 2.5rem; margin: 0 0 1rem 0; letter-spacing: -1px; }
-        .project-info p { font-size: 1.1rem; color: var(--accent); }
-        .project-image img { width: 100%; filter: grayscale(10%); transition: 0.5s; }
-        .project-image img:hover { filter: grayscale(0%); }
+        /* Work Section */
+        .project-block { padding: 4rem 0; border-top: 1px solid #eee; }
+        .project-item { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 6rem; }
+        .project-info h3 { font-size: 2rem; margin: 0 0 1rem 0; letter-spacing: -1px; }
+        .project-info p { font-size: 1rem; color: var(--accent); }
 
-        /* Footer / Contact */
-        footer { padding: 10rem 0 4rem 0; background: #000; color: #fff; text-align: center; }
-        footer h2 { font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 3rem; letter-spacing: -2px; }
-        .contact-links { font-family: var(--mono); margin-top: 2rem; }
-        .contact-links a { color: #fff; text-decoration: none; margin: 0 20px; font-size: 1rem; position: relative; }
-        .contact-links a:hover::after { content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 1px; background: #fff; }
+        /* Footer */
+        footer { padding: 6rem 0 3rem 0; background: #000; color: #fff; text-align: center; }
+        footer h2 { font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 2.5rem; letter-spacing: -1px; }
+        .contact-links { font-family: var(--mono); margin-top: 1.5rem; }
+        .contact-links a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 0.9rem; border-bottom: 1px solid #444; padding-bottom: 3px; transition: 0.3s; }
+        .contact-links a:hover { border-color: #fff; }
 
+        /* Responsive Fixes */
         @media (max-width: 768px) {
             .hero, .about-grid, .project-item { grid-template-columns: 1fr; gap: 2rem; }
-            .hero-text h1 { font-size: 3.5rem; }
+            .hero-text h1 { font-size: 2.8rem; }
+            .hero { padding: 2rem 0; }
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="logo">RICHARD GAO // 2026</div>
+    <div class="logo">RICHARD GAO</div>
     <div class="links">
         <a href="#about">ABOUT</a>
         <a href="#work">WORK</a>
@@ -68,8 +64,8 @@
 <div class="container">
     <header class="hero">
         <div class="hero-text">
-            <h1>Aspiring<br>Litigator.</h1>
-            <p>// Duke Law '29 <br>// NYC Based <br>// Editor of The Triangle Toast</p>
+            <h1>New York City Based,<br>North Carolina Raised.</h1>
+            <p>// Duke Law '29 <br>// Debt Capital Markets <br>// The Triangle Toast</p>
         </div>
         <div class="hero-image">
             <img src="IMG_2900.JPG" alt="Richard Gao Headshot">
@@ -78,18 +74,18 @@
 
     <section id="about" class="about-grid">
         <div>
-            <span class="section-label">01. Perspective</span>
+            <span class="section-label">01. Welcome</span>
             <div class="about-main-text">
-                <p>Based in New York, I am currently navigating the space between high-stakes litigation and community-driven media.</p>
-                <p>As a future litigator at <strong>Duke University School of Law</strong>, my focus lies in the intersection of legal advocacy and emerging tech. I believe the future of law belongs to those who can bridge technical precision with human storytelling.</p>
+                <p>Welcome to my personal website! You can learn more about me here, and find ways to contact me as well.</p>
+                <p>I'm an aspiring lawyer with extensive experience working in <strong>Debt Capital Markets</strong>. As I prepare for my JD at Duke University School of Law, I remain focused on the intersection of complex financial structures, legal advocacy, and human storytelling.</p>
             </div>
             <img src="IMG_3995.JPG" alt="Secretary-General Remarks">
             <p class="caption">Secretary-General Remarks // NYU</p>
         </div>
         <div class="about-image-stack">
             <span class="section-label">02. Life</span>
-            <img src="IMG_9531_Original.jpg" alt="NYC Lifestyle">
-            <p style="font-size: 0.9rem; margin-bottom: 3rem;">Outside the classroom, I am an avid explorer of the French language and the creator of <em>The Triangle Toast</em>, a newsletter tracking the pulse of North Carolina's RTP area.</p>
+            <img src="IMG_9531_Original.JPG" alt="NYC Lifestyle">
+            <p style="font-size: 0.9rem; margin-bottom: 2rem; color: var(--accent);">Outside of finance and law, I’m achievement-driven in all arenas—from mastering the French language to curating regional news.</p>
             <img src="IMG_4053.jpg" alt="Travel and Personal">
         </div>
     </section>
@@ -103,17 +99,17 @@
             </div>
             <div class="project-info">
                 <h3>The Triangle Toast</h3>
-                <p>A weekly curation of news, real estate, and cultural trends in Raleigh, Durham, and Chapel Hill. Built for the community, by the community.</p>
+                <p>Curating the pulse of the North Carolina Triangle. This project tracks news, real estate, and cultural shifts in Raleigh, Durham, and Chapel Hill.</p>
             </div>
         </div>
 
-        <div class="project-item reverse">
-            <div class="project-image">
+        <div class="project-item" style="direction: rtl;">
+            <div class="project-image" style="direction: ltr;">
                 <img src="e9b1847e-8db0-4626-80bb-fee5ccdd7f05.jpg" alt="The Brooklyn Busker">
             </div>
-            <div class="project-info">
+            <div class="project-info" style="direction: ltr;">
                 <h3>The Brooklyn Busker</h3>
-                <p>Street performance as a form of urban storytelling. Bringing live violin music to the public spaces of New York City.</p>
+                <p>Bringing high-energy violin performance to the streets of New York City. A study in public engagement and musical storytelling.</p>
             </div>
         </div>
 
@@ -123,7 +119,7 @@
             </div>
             <div class="project-info">
                 <h3>Performance & Community</h3>
-                <p>Whether performing with partners (<em>IMG_3999.JPG</em>) or solo, I value the connection that music creates in high-pressure environments.</p>
+                <p>Whether performing with partners or solo, I value the connection that music creates in high-pressure environments.</p>
             </div>
         </div>
     </section>
@@ -137,7 +133,7 @@
             <a href="https://www.linkedin.com/in/richard-gao-279ab9191/" target="_blank">LINKEDIN</a>
             <a href="https://www.instagram.com/brooklyn_busker/" target="_blank">INSTAGRAM</a>
         </div>
-        <p style="margin-top: 6rem; font-family: var(--mono); font-size: 0.6rem; opacity: 0.4;">© 2026 RICHARD GAO // BUILT IN NYC // DUKE LAW '29</p>
+        <p style="margin-top: 4rem; font-family: var(--mono); font-size: 0.6rem; opacity: 0.4;">© 2026 RICHARD GAO // DUKE LAW '29</p>
     </div>
 </footer>
 

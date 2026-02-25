@@ -26,11 +26,13 @@
         .img-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
         .img-grid-3 img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
 
+        .single-img-small { width: 60%; height: auto; border-radius: 2px; margin-bottom: 3rem; }
+
         footer { padding: 4rem 0; text-align: center; border-top: 1px solid #eee; font-family: var(--mono); font-size: 0.7rem; color: var(--accent); }
 
         @media (max-width: 600px) {
             .img-row { flex-direction: column; }
-            .img-row img, .img-grid-3 { width: 100%; grid-template-columns: 1fr; }
+            .img-row img, .img-grid-3, .single-img-small { width: 100%; grid-template-columns: 1fr; }
             .img-grid-3 img { height: auto; }
         }
     </style>
@@ -80,6 +82,12 @@
         <div class="bio-text">
             <p>After graduating, I returned to RBC where I summered, to work on their Fixed Income Syndication Desk. There, I assisted with investment grade new issues, and found investment solutions for our institutional clients. I was promoted to associate in December 2025.</p>
         </div>
+
+        <h2>05 // Reviving Passions</h2>
+        <div class="bio-text">
+            <p>I’ve recently returned to activities from childhood. I’ve made it a goal to swim 50 times this year in an effort to revive my cardio. But the most fruitful has been my busking project. Starting as just a way to spend my free time after work, busking for me grew into a satisfying creative outlet. I’ve played in weddings, for wedding proposals, dinners, and even corporate events. I typically play in Central Park, but also across other parks in New York and Brooklyn.</p>
+        </div>
+        <img src="chbusking.JPG" alt="Busking in New York" class="single-img-small">
     </div>
 
     <footer>

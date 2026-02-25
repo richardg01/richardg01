@@ -7,7 +7,7 @@
     <style>
         :root { --bg: #ffffff; --text: #111111; --mono: 'Courier New', Courier, monospace; }
         body { font-family: var(--mono); background: var(--bg); color: var(--text); margin: 0; }
-        nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
+        nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; position: sticky; top: 0; background: rgba(255,255,255,0.9); z-index: 100; }
         nav a { text-decoration: none; color: var(--text); margin-left: 20px; font-size: 0.8rem; }
         .container { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
         .post { margin-bottom: 4rem; border-bottom: 1px solid #eee; padding-bottom: 2rem; text-decoration: none; color: inherit; display: block; }
@@ -18,13 +18,23 @@
 <body>
     <nav>
         <div class="logo">RICHARD GAO</div>
-        <div class="links"><a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="blog.html">BLOG</a></div>
+        <div class="links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="blog.html">BLOG</a>
+        </div>
     </nav>
     <div class="container">
         <div class="post">
             <p class="date">FEBRUARY 2026</p>
             <h3>Trip to Barcelona // Reflections</h3>
-            <p>Coming soon: A detailed breakdown of my 5-day trip to Barcelona, including how I maximized my Bilt and Chase points.</p>
+            <p>Coming soon: A detailed breakdown of my 5-day trip to Barcelona, including how I maximized my Bilt and Chase points for the flight from RDU.</p>
+        </div>
+        <div class="post">
+            <p class="date">JANUARY 2026</p>
+            <h3>From DCM to Duke Law</h3>
+            <p>Thoughts on transitioning from the fast-paced world of Debt Capital Markets to the academic rigor of law school.</p>
         </div>
     </div>
 </body>

@@ -7,75 +7,41 @@
     <style>
         :root { --bg: #ffffff; --text: #111111; --accent: #666; --mono: 'Courier New', Courier, monospace; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.5; }
-        
-        /* Navigation - Consistent with Home/About */
         nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 100; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: var(--text); margin-left: 20px; transition: 0.3s; }
-        nav a:hover { opacity: 0.5; }
-
+        nav a { text-decoration: none; color: var(--text); margin-left: 20px; }
         .container { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
-        
         header { margin-bottom: 4rem; }
         header h1 { font-size: clamp(2rem, 5vw, 4rem); text-transform: uppercase; letter-spacing: -2px; margin: 0; }
-        header p { font-family: var(--mono); color: var(--accent); text-transform: uppercase; font-size: 0.8rem; margin-top: 1rem; }
-
-        /* Visual Menu Grid */
         .project-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; }
-        
-        .project-card { text-decoration: none; color: inherit; display: block; group; }
+        .project-card { text-decoration: none; color: inherit; display: block; }
         .img-container { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 2px; background: #f4f4f4; margin-bottom: 1.5rem; }
-        .project-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s; }
-        
-        /* Hover Effects */
-        .project-card:hover img { transform: scale(1.05); filter: grayscale(0%); }
-        .project-card h3 { font-size: 1.8rem; margin: 0; letter-spacing: -1px; text-transform: uppercase; }
-        .project-card p { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); margin-top: 0.5rem; text-transform: uppercase; }
-
-        footer { padding: 6rem 0 3rem 0; text-align: center; border-top: 1px solid #eee; font-family: var(--mono); font-size: 0.7rem; color: var(--accent); }
-
-        @media (max-width: 768px) { .project-menu { grid-template-columns: 1fr; } }
+        .project-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.5s; }
+        .project-card:hover img { filter: grayscale(0%); transform: scale(1.03); }
+        .project-card h3 { font-size: 1.8rem; margin: 0; text-transform: uppercase; }
+        .project-card p { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); text-transform: uppercase; margin-top: 0.5rem; }
+        footer { padding: 4rem 0; text-align: center; border-top: 1px solid #eee; font-family: var(--mono); font-size: 0.7rem; }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="logo">RICHARD GAO</div>
-        <div class="links">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="blog.html">BLOG</a>
-        </div>
+        <div class="links"><a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="projects.html">PROJECTS</a><a href="blog.html">BLOG</a></div>
     </nav>
-
     <div class="container">
-        <header>
-            <h1>Selected Projects</h1>
-            <p>// Creative Performance & Technical Development</p>
-        </header>
-
+        <header><h1>Selected Projects</h1></header>
         <div class="project-menu">
             <a href="busker.html" class="project-card">
-                <div class="img-container">
-                    <img src="e9b1847e-8db0-4626-80bb-fee5ccdd7f05.jpg" alt="The Brooklyn Busker">
-                </div>
+                <div class="img-container"><img src="e9b1847e-8db0-4626-80bb-fee5ccdd7f05.jpg" alt="Busker"></div>
                 <h3>The Brooklyn Busker</h3>
-                <p>Creative Performance // NYC Public Space // Street Performance</p>
+                <p>Performance // Music // NYC</p>
             </a>
-
             <a href="travel-ai.html" class="project-card">
-                <div class="img-container">
-                    <img src="IMG_9531_Original.JPG" alt="Travel Agent AI">
-                </div>
-                <h3>Travel Agent AI</h3>
-                <p>AI Development // Travel Optimization // Logistics</p>
+                <div class="img-container"><img src="IMG_9531_Original.JPG" alt="AI Project"></div>
+                <h3>AI Travel Agent</h3>
+                <p>Development // Optimization // Logistics</p>
             </a>
         </div>
     </div>
-
-    <footer>
-        <p>© 2026 RICHARD GAO // PORTFOLIO</p>
-    </footer>
-
+    <footer>© 2026 RICHARD GAO</footer>
 </body>
 </html>

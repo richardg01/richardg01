@@ -5,25 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects // Richard Gao</title>
     <style>
-        :root { --bg: #ffffff; --text: #111111; --accent: #555555; --mono: 'Courier New', Courier, monospace; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; line-height: 1.6; color: var(--text); }
-        nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; border-bottom: 1px solid #eee; position: sticky; top: 0; background: rgba(255,255,255,0.9); z-index: 100; }
-        nav a { text-decoration: none; color: var(--text); margin-left: 20px; }
+        :root { --bg: #ffffff; --text: #111111; --accent: #666; --mono: 'Courier New', Courier, monospace; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.5; }
         
-        .container { max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem; }
-        h2 { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-top: 4rem; }
-        h3 { font-size: 2rem; margin: 0.5rem 0; letter-spacing: -1px; }
-        
-        .project-meta { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); margin-bottom: 1.5rem; text-transform: uppercase; }
-        .project-description { font-size: 1.1rem; font-weight: 300; margin-bottom: 2rem; }
-        
-        .project-image { width: 100%; border-radius: 2px; margin-bottom: 3rem; }
-        .divider { height: 1px; background: #eee; margin: 4rem 0; }
+        /* Navigation - Consistent with Home/About */
+        nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 100; border-bottom: 1px solid #eee; }
+        nav a { text-decoration: none; color: var(--text); margin-left: 20px; transition: 0.3s; }
+        nav a:hover { opacity: 0.5; }
 
-        footer { padding: 4rem 0; text-align: center; border-top: 1px solid #eee; font-family: var(--mono); font-size: 0.7rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
+        
+        header { margin-bottom: 4rem; }
+        header h1 { font-size: clamp(2rem, 5vw, 4rem); text-transform: uppercase; letter-spacing: -2px; margin: 0; }
+        header p { font-family: var(--mono); color: var(--accent); text-transform: uppercase; font-size: 0.8rem; margin-top: 1rem; }
+
+        /* Visual Menu Grid */
+        .project-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; }
+        
+        .project-card { text-decoration: none; color: inherit; display: block; group; }
+        .img-container { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 2px; background: #f4f4f4; margin-bottom: 1.5rem; }
+        .project-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s; }
+        
+        /* Hover Effects */
+        .project-card:hover img { transform: scale(1.05); filter: grayscale(0%); }
+        .project-card h3 { font-size: 1.8rem; margin: 0; letter-spacing: -1px; text-transform: uppercase; }
+        .project-card p { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); margin-top: 0.5rem; text-transform: uppercase; }
+
+        footer { padding: 6rem 0 3rem 0; text-align: center; border-top: 1px solid #eee; font-family: var(--mono); font-size: 0.7rem; color: var(--accent); }
+
+        @media (max-width: 768px) { .project-menu { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="logo">RICHARD GAO</div>
         <div class="links">
@@ -35,53 +49,33 @@
     </nav>
 
     <div class="container">
-        <section>
-            <h2>01 // MEDIA & VENTURES</h2>
-            <h3>The Triangle Toast</h3>
-            <div class="project-meta">Founder & Editor // North Carolina</div>
-            <p class="project-description">
-                A weekly newsletter providing deep-dive analysis on real estate, tech growth, and cultural shifts within the Raleigh-Durham-Chapel Hill area. I curate trends from over 15 primary local sources to keep the RTP community informed.
-            </p>
-            <img src="Gemini_Generated_Image_y46jp3y46jp3y46j.jpg" class="project-image" alt="The Triangle Toast Logo">
-        </section>
+        <header>
+            <h1>Selected Projects</h1>
+            <p>// Creative Performance & Technical Development</p>
+        </header>
 
-        <div class="divider"></div>
+        <div class="project-menu">
+            <a href="busker.html" class="project-card">
+                <div class="img-container">
+                    <img src="e9b1847e-8db0-4626-80bb-fee5ccdd7f05.jpg" alt="The Brooklyn Busker">
+                </div>
+                <h3>The Brooklyn Busker</h3>
+                <p>Creative Performance // NYC Public Space // Street Performance</p>
+            </a>
 
-        <section>
-            <h2>02 // PROFESSIONAL</h2>
-            <h3>Debt Capital Markets</h3>
-            <div class="project-meta">Investment Banking // New York City</div>
-            <p class="project-description">
-                Working within the fast-paced environment of NYC finance, my experience in DCM involves navigating complex financial structures and market dynamics. This professional rigor informs my approach to legal advocacy as I transition toward my JD.
-            </p>
-            <img src="IMG_2906.JPG" class="project-image" alt="Professional Networking">
-        </section>
-
-        <div class="divider"></div>
-
-        <section>
-            <h2>03 // CREATIVE PERFORMANCE</h2>
-            <h3>The Brooklyn Busker</h3>
-            <div class="project-meta">Street Performance // NYC</div>
-            <p class="project-description">
-                An ongoing study of public engagement through music. By performing violin in public spaces like Central Park and Brooklyn, I bridge the gap between high-pressure professional environments and the organic storytelling of the city streets.
-            </p>
-            <img src="IMG_3999.JPG" class="project-image" alt="Violin Performance">
-        </section>
-
-        <div class="divider"></div>
-
-        <section>
-            <h2>04 // LINGUISTICS</h2>
-            <h3>DELF B2 Certification</h3>
-            <div class="project-meta">French Language // Proficiency</div>
-            <p class="project-description">
-                Currently refining my technical and conversational French fluency. Achieving B2 certification is a cornerstone of my goal to engage with international legal and financial frameworks.
-            </p>
-            <img src="IMG_4053.jpg" class="project-image" alt="Travel and Culture">
-        </section>
+            <a href="travel-ai.html" class="project-card">
+                <div class="img-container">
+                    <img src="IMG_9531_Original.JPG" alt="Travel Agent AI">
+                </div>
+                <h3>Travel Agent AI</h3>
+                <p>AI Development // Travel Optimization // Logistics</p>
+            </a>
+        </div>
     </div>
 
-    <footer>© 2026 RICHARD GAO // PROJECT PORTFOLIO</footer>
+    <footer>
+        <p>© 2026 RICHARD GAO // PORTFOLIO</p>
+    </footer>
+
 </body>
 </html>

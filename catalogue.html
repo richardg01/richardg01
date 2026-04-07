@@ -16,8 +16,10 @@
         .container { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
         
         /* Typography */
-        h2 { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-top: 2rem; margin-bottom: 2rem; }
+        h2 { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-top: 2rem; margin-bottom: 1rem; }
         
+        .header-intro { font-size: 1.1rem; font-weight: 300; margin-bottom: 3rem; color: var(--accent); border-left: 2px solid #eee; padding-left: 1.5rem; }
+
         .catalogue-list { list-style: none; padding: 0; }
         .catalogue-item { border-bottom: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: space-between; align-items: baseline; }
         .song-title { font-size: 1.1rem; font-weight: 400; }
@@ -36,11 +38,17 @@
     <nav>
         <div class="logo">RICHARD GAO</div>
         <div class="links">
+            <a href="catalogue.html">CATALOGUE</a>
         </div>
     </nav>
 
     <div class="container">
         <h2>REPERTOIRE CATALOGUE</h2>
+        
+        <p class="header-intro">
+            Here's the catalogue of all of my songs/pieces! Please feel free to request from me directly when I'm not playing. As always, tips are appreciated!
+        </p>
+
         <ul class="catalogue-list">
             <li class="catalogue-item"><span class="song-title">All I Ask</span> <span class="composer">Adele</span></li>
             <li class="catalogue-item"><span class="song-title">All I ask of You</span> <span class="composer">Phantom of the Opera</span></li>

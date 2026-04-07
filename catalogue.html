@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue // Richard Gao</title>
+    <style>
+        :root { --bg: #ffffff; --text: #111111; --accent: #555555; --mono: 'Courier New', Courier, monospace; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; line-height: 1.6; color: var(--text); }
+        
+        /* Navigation */
+        nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.8rem; border-bottom: 1px solid #eee; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 100; }
+        nav a { text-decoration: none; color: var(--text); margin-left: 20px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
+        
+        /* Typography */
+        h2 { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-top: 2rem; margin-bottom: 2rem; }
+        
+        .catalogue-list { list-style: none; padding: 0; }
+        .catalogue-item { border-bottom: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: space-between; align-items: baseline; }
+        .song-title { font-size: 1.1rem; font-weight: 400; }
+        .composer { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); text-transform: uppercase; text-align: right; padding-left: 1rem; }
+
+        footer { padding: 4rem 0; text-align: center; border-top: 1px solid #eee; font-family: var(--mono); font-size: 0.7rem; color: var(--accent); }
+
+        @media (max-width: 600px) {
+            .catalogue-item { flex-direction: column; gap: 0.2rem; }
+            .composer { text-align: left; padding-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">RICHARD GAO</div>
+        <div class="links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="blog.html">BLOG</a>
+            <a href="catalogue.html">CATALOGUE</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>REPERTOIRE CATALOGUE</h2>
+        <ul class="catalogue-list">
+            <li class="catalogue-item"><span class="song-title">All I Ask</span> <span class="composer">Adele</span></li>
+            <li class="catalogue-item"><span class="song-title">All I ask of You</span> <span class="composer">Phantom of the Opera</span></li>
+            <li class="catalogue-item"><span class="song-title">Another Day of Sun</span> <span class="composer">La La Land</span></li>
+            <li class="catalogue-item"><span class="song-title">Ashitaka & Son</span> <span class="composer">Joe Hisaishi</span></li>
+            <li class="catalogue-item"><span class="song-title">Ashokan Farewell</span> <span class="composer">Jay Ungar & Molly Mason</span></li>
+            <li class="catalogue-item"><span class="song-title">Beautiful Boy</span> <span class="composer">Beatles</span></li>
+            <li class="catalogue-item"><span class="song-title">Cinnamon Girl</span> <span class="composer">Lana Del Ray</span></li>
+            <li class="catalogue-item"><span class="song-title">City of Stars</span> <span class="composer">La La Land</span></li>
+            <li class="catalogue-item"><span class="song-title">Colors of the Wind</span> <span class="composer">Disney</span></li>
+            <li class="catalogue-item"><span class="song-title">Forget-me-not</span> <span class="composer">Laufey</span></li>
+            <li class="catalogue-item"><span class="song-title">Golden Slumbers</span> <span class="composer">Beatles</span></li>
+            <li class="catalogue-item"><span class="song-title">Howl's Moving Castle</span> <span class="composer">Joe Hisaishi</span></li>
+            <li class="catalogue-item"><span class="song-title">I Wish You Love</span> <span class="composer">Laufey</span></li>
+            <li class="catalogue-item"><span class="song-title">Kiki's Delivery Service</span> <span class="composer">Joe Hisaishi</span></li>
+            <li class="catalogue-item"><span class="song-title">Love like you</span> <span class="composer">Steven Universe</span></li>
+            <li class="catalogue-item"><span class="song-title">Love Theme from Cinema Paradiso</span> <span class="composer">Ennio Morricone</span></li>
+            <li class="catalogue-item"><span class="song-title">Love Theme from Godfather</span> <span class="composer">Carlo Savina and Nino Rota</span></li>
+            <li class="catalogue-item"><span class="song-title">Married Life</span> <span class="composer">Pixar</span></li>
+            <li class="catalogue-item"><span class="song-title">Meditation</span> <span class="composer">Massanet</span></li>
+            <li class="catalogue-item"><span class="song-title">Nearer My God to Thee</span> <span class="composer">Sarah Flower Adams</span></li>
+            <li class="catalogue-item"><span class="song-title">O Sole Mio</span> <span class="composer">Alfredo Mazzucchi and Eduardo di Capua</span></li>
+            <li class="catalogue-item"><span class="song-title">Remember Me</span> <span class="composer">Disney</span></li>
+            <li class="catalogue-item"><span class="song-title">Reprise (Spirited Away)</span> <span class="composer">Joe Hisaishi</span></li>
+            <li class="catalogue-item"><span class="song-title">Risk it All</span> <span class="composer">Bruno Mars</span></li>
+            <li class="catalogue-item"><span class="song-title">Salut D'Amour</span> <span class="composer">Elgar</span></li>
+            <li class="catalogue-item"><span class="song-title">Slipping through my fingers</span> <span class="composer">Abba</span></li>
+            <li class="catalogue-item"><span class="song-title">Spring Movement 1</span> <span class="composer">Vivaldi</span></li>
+            <li class="catalogue-item"><span class="song-title">The Promise of the World</span> <span class="composer">Joe Hisaishi</span></li>
+            <li class="catalogue-item"><span class="song-title">The Swan</span> <span class="composer">Saint-Saens</span></li>
+            <li class="catalogue-item"><span class="song-title">Until I Found You</span> <span class="composer">Stephen Sanchez</span></li>
+            <li class="catalogue-item"><span class="song-title">Winter Movement 1</span> <span class="composer">Vivaldi</span></li>
+            <li class="catalogue-item"><span class="song-title">Yesterday</span> <span class="composer">Beatles</span></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2026 RICHARD GAO // NEW YORK CITY</p>
+    </footer>
+
+</body>
+</html>
